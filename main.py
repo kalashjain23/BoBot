@@ -25,17 +25,17 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if message.content == "bo help":
+    if message.content.lower() == "bo help":
         await message.channel.send(help.help_msg)
 
     if message.content.startswith("bo"):
-        msg = message.content.split("bo ", 1)[1]
+        msg = message.content.split(" ")
 
-        if msg == 'hello':
+        if msg[1] == 'hello':
             await message.channel.send("Sup Bobo *wink* *wink*")
 
-        if message.content.split(" ")[1] == 'weather':
-            description = weather.weather(message.content.split(" ")[2])
+        if msg[1] == 'weather':
+            description = weather.weather(msg[2])
             await message.channel.send(description)
 
     return
