@@ -20,11 +20,14 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+    if message.author == bot.user:
+        return
+
     if message.content.startswith("bo"):
-        if message.author == bot.user:
-            return
-        if message.content == 'bo hello':
-            await message.channel.send("Sup Bobo")
+        msg = message.content.split("bo ", 1)[1]
+
+        if msg == 'hello':
+            await message.channel.send("Sup Bobo *wink* *wink*")
     return
 
 bot.run(DISCORD_TOKEN)
