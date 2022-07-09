@@ -11,8 +11,8 @@ def weather(city):
 
     if response.status_code == 200:
         data = response.json()
-        weather = data['weather'][0]['description']
-        return weather
+        description = data['weather'][0]['description']
+        return description
 
     else:
         return "ERROR!!"

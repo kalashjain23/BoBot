@@ -1,5 +1,6 @@
 import discord
 import os
+import weather
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -9,7 +10,7 @@ bot = discord.Client()
 
 @bot.event
 async def on_ready():
-    print(f"We have logged in as {bot.user}")
+    print(f"Logged in as {bot.user}")
     guild_count = 0
     for guild in bot.guilds:
         print(f"-{guild.id} (name:{guild.name})")
@@ -28,6 +29,11 @@ async def on_message(message):
 
         if msg == 'hello':
             await message.channel.send("Sup Bobo *wink* *wink*")
+
+        if message.content.split(" ")[1] == 'weather':
+            description = weather.weather(message.content.split(" ")[2])
+            await message.channel.send(description)
+
     return
 
 bot.run(DISCORD_TOKEN)
