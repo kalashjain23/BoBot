@@ -2,6 +2,7 @@ import discord
 import os
 import weather
 from dotenv import load_dotenv
+import help
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
@@ -23,6 +24,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
+
+    if message.content == "bo help":
+        await message.channel.send(help.help_msg)
 
     if message.content.startswith("bo"):
         msg = message.content.split("bo ", 1)[1]
