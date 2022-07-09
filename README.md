@@ -1,5 +1,5 @@
 # BoBot
-A discord bot made for fun.
+A discord bot made for fun.<br>
 
 #
 
@@ -11,6 +11,6 @@ These are the modules you need to install before contributing to the bot:<br>
 #
 
 ### Commands that you can use
-`bo hello`
-`bo weather {city name}`
+`bo hello`<br>
+`bo weather {city name}`<br>
 `bo help`
