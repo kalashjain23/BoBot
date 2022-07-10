@@ -4,7 +4,7 @@ help_msg = '''```cs
 
 
 "Commands available:" 
-  [weather]"{description = city} (gives you the weather of that city)"
+  [weather {description = city}]"(gives you the weather of that city)"
   
   [help] 
 ```

@@ -34,14 +34,17 @@ async def on_message(message):
         if msg[1] == 'hello':
             await message.channel.send("Sup Bobo *wink* *wink*")
 
-        if msg[1] == 'weather':
+        if len(msg) == 3 and msg[1] == 'weather':
             description = weather.weather(msg[2])
-            output = f'''```cs
-Weather @{msg[2].title()}: "{description}"\nTemperature: "{weather.temp(msg[2])}°C"```'''
-            await message.channel.send(output)
+            if description != "ERROR!!":
+                output = f'''```cs
+    Weather @{msg[2].title()}: "{description}"\nTemperature: "{weather.temp(msg[2])}°C"```'''
+                await message.channel.send(output)
 
-        
+            else:
+                await message.channel.send("Oopsie! Looks like an error!")
 
     return
+
 
 bot.run(DISCORD_TOKEN)
