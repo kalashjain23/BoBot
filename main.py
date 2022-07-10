@@ -36,8 +36,11 @@ async def on_message(message):
 
         if msg[1] == 'weather':
             description = weather.weather(msg[2])
-            output = f"Weather in {msg[2]}: {description}\nTemperature: {weather.temp(msg[2])}°C"
+            output = f'''```cs
+Weather @{msg[2].title()}: "{description}"\nTemperature: "{weather.temp(msg[2])}°C"```'''
             await message.channel.send(output)
+
+        
 
     return
 
