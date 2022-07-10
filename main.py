@@ -1,8 +1,11 @@
-import discord
 import os
-import weather
+
+import discord
 from dotenv import load_dotenv
+
+import jokes
 import help
+import weather
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
