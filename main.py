@@ -1,11 +1,13 @@
-import discord
 import os
-import weather, bored
+
+import discord
 from dotenv import load_dotenv
+
+import bored
 import help
+import weather
 
 load_dotenv()
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 bot = discord.Client()
 
 
@@ -27,24 +29,25 @@ async def on_message(message):
 
     if message.content.lower() == "bo help":
         await message.channel.send(help.help_msg)
+        return
 
-    if message.content.startswith("bo"):
-        msg = message.content.split(" ")
+    msg = message.content.split(" ")
+    if msg[0].lower() == "bo":
 
         if msg[1] == 'hello':
             await message.channel.send("Sup Bobo *wink* *wink*")
 
-        if len(msg) == 3 and msg[1] == 'weather':
+        elif len(msg) == 3 and msg[1].lower() == 'weather':
             description = weather.weather(msg[2])
             if description != "ERROR!!":
                 output = f'''```cs
-    Weather in {msg[2].title()}: "{description}"\n    Temperature: "{weather.temp(msg[2])}°C"```'''
+    Weather in {msg[2].title()}: "{description}"\n    Temperature: "{weather.temp(msg[2].lower())}°C"```'''
                 await message.channel.send(output)
 
             else:
                 await message.channel.send('''''''```cs\n"Oopsie! Looks like an error!"```''')
 
-        if msg[1] == 'mebored':
+        elif msg[1].lower() == 'mebored':
             await message.channel.send(f'''```cs\n"{bored.work()}"```''')
 
         else:
@@ -53,4 +56,4 @@ async def on_message(message):
     return
 
 
-bot.run(DISCORD_TOKEN)
+bot.run(os.getenv("DISCORD_TOKEN"))

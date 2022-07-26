@@ -3,9 +3,12 @@ help_msg = '''```cs
         -> bo {command} {description (if_required)}
 
 
-"Commands available:" 
+"Commands available:"
+  [help]"(all about the bot)"
+  
   [weather {description = city}]"(gives you the weather of that city)"
   
-  [help] 
+  [mebored]"(gives you a random work to do)"
+   
 ```
 '''
