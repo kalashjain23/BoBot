@@ -1,6 +1,6 @@
 import discord
 import os
-import weather
+import weather, bored
 from dotenv import load_dotenv
 import help
 
@@ -38,11 +38,14 @@ async def on_message(message):
             description = weather.weather(msg[2])
             if description != "ERROR!!":
                 output = f'''```cs
-    Weather @{msg[2].title()}: "{description}"\nTemperature: "{weather.temp(msg[2])}°C"```'''
+    Weather in {msg[2].title()}: "{description}"\n    Temperature: "{weather.temp(msg[2])}°C"```'''
                 await message.channel.send(output)
 
             else:
-                await message.channel.send("Oopsie! Looks like an error!")
+                await message.channel.send('''''''```cs\n"Oopsie! Looks like an error!"```''')
+
+        if msg[1] == 'mebored':
+            await message.channel.send(bored.work())
 
     return
 
