@@ -38,7 +38,7 @@
     "last_opened_file_path": "/home/kalash/git_space/BoBot"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.bored">
+  <component name="RunManager" selected="Python.main">
     <configuration name="bored" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BoBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,8 +83,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.bored" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.bored" />
       </list>
     </recent_temporary>
   </component>

@@ -45,7 +45,10 @@ async def on_message(message):
                 await message.channel.send('''''''```cs\n"Oopsie! Looks like an error!"```''')
 
         if msg[1] == 'mebored':
-            await message.channel.send(bored.work())
+            await message.channel.send(f'''```cs\n"{bored.work()}"```''')
+
+        else:
+            await message.channel.send('''```cs\n"What command is that bruv??!"```''')
 
     return
 
