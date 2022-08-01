@@ -3,14 +3,8 @@ A discord bot made for fun.<br>
 
 #
 
-### Looking forward to contribute?
-These are the modules you need to install before contributing to the bot:<br>
-`pip install discord.py`<br>
-`pip install python-dotenv`
-
-#
-
 ### Commands that you can use
-`bo hello`<br>
-`bo weather {city name}`<br>
-`bo help`
+`bo hello` -- Command to check if the bot's alive!<br><br>
+`bo weather {city name}` -- Gives you the accurate weather of the city provided as input!<br><br>
+`bo help` -- Gives you the list of all available commands!<br><br>
+`bo mebored`   -- Gives you a random task to do!
