@@ -1,7 +1,6 @@
-import discord
 from discord.ext import commands
 
-import bored
+from APIs import bored
 
 
 class Fun(commands.Cog):

@@ -1,7 +1,4 @@
-import discord
 from discord.ext import commands
-
-import help
 
 
 class General(commands.Cog):

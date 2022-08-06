@@ -1,7 +1,6 @@
-import discord
 from discord.ext import commands
 
-import weather
+from APIs import weather
 
 
 class Weather(commands.Cog):
