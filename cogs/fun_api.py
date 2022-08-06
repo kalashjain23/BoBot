@@ -15,7 +15,7 @@ class Fun(commands.Cog):
     async def hello(self, message):  # Takes the message by the user as the parameter
         if message.author == commands.bot:  # If the bot is the one sending messages, it will ignore
             return
-        await message.channel.send("Sup BoBo *wink* *wink*")
+        await message.channel.send("```Sup BoBo *wink* *wink*```")
 
 
 def setup(bot):

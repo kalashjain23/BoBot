@@ -12,7 +12,7 @@ class Weather(commands.Cog):
         self.description = weather.weather(city)
         if self.description != "ERROR!!":
             output = f'''```cs
-    Weather in {city.title()}: "{self.description}"\n    Temperature: "{weather.temp(city.lower())}°C"```'''
+Weather in {city.title()}: "{self.description}"\nTemperature: "{weather.temp(city.lower())}°C"```'''
             await message.channel.send(output)
         else:
             await message.channel.send('''''''```cs\n"Oopsie! Looks like an error!"```''')

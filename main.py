@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix='.bo ')
 
 
 @bot.command()
-async def load(ctx, extension):
+async def load(extension):
     bot.load_extension(f'cogs.{extension}')
 
 for filename in os.listdir('./cogs'):
