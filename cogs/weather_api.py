@@ -15,7 +15,12 @@ class Weather(commands.Cog):
 Weather in {city.title()}: "{self.description}"\nTemperature: "{weather.temp(city.lower())}°C"```'''
             await message.channel.send(output)
         else:
-            await message.channel.send('''''''```cs\n"Oopsie! Looks like an error!"```''')
+            await message.channel.send('''''''```cs\n"Bruh what even is what?"```''')
+
+    @weather.error
+    async def weather_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send('''```cs\n"Looks like you were trying to get information about nothing!?!"```''')
 
 
 def setup(bot):
