@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6ce14e7e-9735-41c2-b35e-2aca970904d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cogs/weather_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/cogs/weather_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
