@@ -19,8 +19,13 @@ async def load(extension):
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Game('with you 😳'))
-    print(f"BoBot is online.")
 
+    print(f"Logged in as {bot.user}.")
+    guild_count = 0
+    for guild in bot.guilds:
+        guild_count += 1
+        print(f"-{guild.id} (name: {guild.name})")
+    print(f"I'm present in {guild_count} servers!!")
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
