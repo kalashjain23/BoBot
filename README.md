@@ -1,8 +1,6 @@
 # BoBot
 A discord bot made for fun.<br>
-<a href = "https://discord.com/api/oauth2/authorize?client_id=995028367717974046&permissions=274927397888&scope=bot">Add me to your server!!</a><br>
-
-#
+<a href = "https://discord.com/api/oauth2/authorize?client_id=995028367717974046&permissions=274927397888&scope=bot">Add me to your server!!</a><br><br>
 
 ### Commands that you can use
 `.bo help` -- Gives you the list of all available commands!<br><br>
@@ -10,4 +8,15 @@ A discord bot made for fun.<br>
 `.bo weather {city name}` -- Gives you the information about the weather of the city!<br><br>
 `.bo bored`   -- Gives you a random task to do!<br><br>
 `.bo {actions}` -- Gives you a gif for the action!<br>
-Currently available actions: <strong>[ hug, cuddle, dance, blush ]</strong>
+Currently available actions: <strong>[ hug, cuddle, dance, blush ]</strong><br><br>
+
+### Future Plans
+- [x] Transferring all the api calls in separate directories
+- [x] Creation of cogs and arranging code in cogs
+- [ ] Make README more readable :)
+- [ ] Add comments to the code
+- [ ] Add more fun APIs
+  - [ ] PopCat API - contains almost everything I need
+  - [ ] ...
+ - [ ] Adding databases to introduce levels
+ - [ ] ...
