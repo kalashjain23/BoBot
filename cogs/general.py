@@ -14,7 +14,10 @@ class General(commands.Cog):
     @clear.error
     async def clear_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):
-            await ctx.channel.send('''```cs\nYou don't have permission to do so!!```''')
+            embed = discord.Embed(title="Lack of Permissions!", color=0xDC143C)
+            embed.add_field(name="Manage messages permission required", value="Ask the admins for the power!")
+            
+            await ctx.channel.send(embed=embed)
 
 
 def setup(bot):
