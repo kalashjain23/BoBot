@@ -7,12 +7,14 @@ A discord bot made for fun.<br>
 `.bo hello` -- Command to check if the bot is alive or not!<br><br>
 `.bo weather {city name}` -- Gives you the information about the weather of the city!<br><br>
 `.bo bored`   -- Gives you a random task to do!<br><br>
+`.bo purge {amount}` -- Clears the messages! (default is 5) <br><br>
 `.bo {actions}` -- Gives you a gif for the action!<br>
 Currently available actions: <strong>[ hug, cuddle, dance, blush ]</strong><br><br>
 
 ### Future Plans
 - [x] Transferring all the api calls in separate directories
 - [x] Creation of cogs and arranging code in cogs
+- [ ] Formatting the output to make it look nice
 - [ ] Make README more readable :)
 - [ ] Add comments to the code
 - [ ] Add more fun APIs
