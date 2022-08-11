@@ -27,6 +27,16 @@ async def on_ready():
         print(f"-{guild.id} (name: {guild.name})")
     print(f"I'm present in {guild_count} servers!!")
 
+
+@bot.event
+async def on_member_join(member):
+    guild = bot.get_guild(995037483093983383)
+    channel = guild.get_channel(1007165957996818482)
+    embed = discord.Embed(title="Welcome to the server!", color=0x00FFFF)
+    embed.add_field(name=f'Glad to have you here :smile: !!', value=f'Now we have {guild.member_count} members! :partying_face:')
+    await channel.send(f'Ayoo! {member.mention} just joined in!!')
+    await channel.send(embed=embed)
+
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
