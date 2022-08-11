@@ -2,7 +2,12 @@ import discord
 import requests
 from discord.ext import commands
 
-from APIs import bored
+
+def work():
+    url = "http://www.boredapi.com/api/activity/"
+    json = (requests.get(url=url)).json()
+
+    return json['activity']
 
 
 class Fun(commands.Cog):
@@ -12,7 +17,7 @@ class Fun(commands.Cog):
     @commands.command(name='bored')
     async def bored(self, message):
         embed = discord.Embed(title="Looks like you're bored!", color=0x98FB98)
-        embed.add_field(name="Tasks that you can do:", value=f"- {bored.work()}\n- {bored.work()}\n- {bored.work()}\n- {bored.work()}\n- {bored.work()}", inline=False)
+        embed.add_field(name="Tasks that you can do:", value=f"- {[work() for i in range(5)]}", inline=False)
 
         await message.channel.send(embed=embed)
 
