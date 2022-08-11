@@ -16,8 +16,9 @@ class Fun(commands.Cog):
 
     @commands.command(name='bored')
     async def bored(self, message):
+        work_list = [f'- {work()}' for i in range(5)]
         embed = discord.Embed(title="Looks like you're bored!", color=0x98FB98)
-        embed.add_field(name="Tasks that you can do:", value=f"- {[work() for i in range(5)]}", inline=False)
+        embed.add_field(name="Tasks that you can do:", value="\n".join(work_list), inline=False)
 
         await message.channel.send(embed=embed)
 
