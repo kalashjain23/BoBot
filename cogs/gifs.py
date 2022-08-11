@@ -2,7 +2,7 @@ from discord.ext import commands
 from APIs import kawai_api
 
 
-class Kawaii(commands.Cog):
+class Gifs(commands.Cog):
     def __int__(self, bot):
         self.bot = bot
         self.url = None
@@ -29,4 +29,4 @@ class Kawaii(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Kawaii(bot))
+    bot.add_cog(Gifs(bot))
