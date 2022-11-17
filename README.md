@@ -24,7 +24,6 @@ Currently available actions: <strong>[ hug, cuddle, dance, blush ]</strong><br>
   - [ ] 8ball API
   - [ ] Scan URLs API
   - [ ] Amethyste API - for images
-  - [ ] 
  - [ ] Adding databases to introduce levels
  - [ ] ...
 
